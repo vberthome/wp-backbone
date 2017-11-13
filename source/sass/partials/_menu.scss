@@ -115,11 +115,6 @@
 		padding: 1rem;
 		border-left: 1px solid $color-gray-light;
 
-		&:after {
-			content: $fa-var-plus;
-			@extend .icon;
-		}
-
 		@include breakpoint(menu) {
 			display: none;
 		}

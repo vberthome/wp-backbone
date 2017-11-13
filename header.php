@@ -35,10 +35,12 @@
 				<?php endif; ?>
 			</div><!-- .branding -->
 
-			<a href="#navigation" class="header__burger js-burger button button--primary">
-				<span class="icon icon-bars"></span>
-				<span class="header__burger-title"><?php _e( 'Menu', 'fw' ) ?></span>
-			</a>
+			<div class="header__burger">
+				<a href="#navigation" class="js-burger button button--primary">
+					<?php echo wp_backbone_svg_icon( 'burger' ) ?>
+					<span class="header__burger-title"><?php _e( 'Menu', 'fw' ) ?></span>
+				</a>
+			</div>
 		</div>
 		<nav id="navigation" class="header__menu" role="navigation">
 			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu', 'menu_class' => 'menu menu--primary' ) ); ?>

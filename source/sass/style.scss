@@ -22,16 +22,20 @@ Text Domain: wp_backbone
  * GENERAL
  */
 @import "partials/site";
-@import "vendors/font-awesome";
+@import "partials/header";
+@import "partials/menu";
+@import "partials/branding";
+@import "partials/intro";
+@import "partials/comments";
+@import "partials/nav";
+@import "partials/widget";
+@import "partials/icon";
 
 /**
  * CONTENU
  */
 @import "partials/post";
 @import "partials/loop";
-@import "partials/comments";
-@import "partials/nav";
-@import "partials/widget";
 @import "partials/button";
 @import "partials/form";
 @import "partials/image";
@@ -40,10 +44,6 @@ Text Domain: wp_backbone
 /**
  * ENTETE
  */
-@import "partials/header";
-@import "partials/menu";
-@import "partials/branding";
-@import "partials/intro";
 
 /**
  * SHORTCODE

@@ -91,18 +91,6 @@ function wp_backbone_caption_width($width)
 add_filter( 'img_caption_shortcode_width', 'wp_backbone_caption_width' );
 
 /**
- * Modification du dossier contenant les personnalisations du framework.
- *
- * @param  string $path
- * @return string
- */
-function wp_backbone_framework_customizations_dir_rel_path( $path )
-{
-	return '/inc/framework';
-}
-add_filter( 'fw_framework_customizations_dir_rel_path', 'wp_backbone_framework_customizations_dir_rel_path' );
-
-/**
  * Ajout d'un lien d'affichage du sous menu pour les menus avec enfants.
  *
  * @param  object $args
@@ -112,7 +100,7 @@ add_filter( 'fw_framework_customizations_dir_rel_path', 'wp_backbone_framework_c
 function wp_backbone_menu_item_with_children( $args, $item )
 {
 	if ( in_array( 'menu-item-has-children', $item->classes ) ) {
-		$args->after = '<span class="menu-display-sub-menu js-display-sub-menu" title=""></span>';
+		$args->after = '<span class="menu-display-sub-menu js-display-sub-menu">' . wp_backbone_svg_icon( 'plus' ) . '</span>';
 	} else {
 		$args->after = '';
 	}

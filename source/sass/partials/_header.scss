@@ -52,7 +52,8 @@
 	display: none;
 
 	@include breakpoint(tablet) {
-		display: inline;
+		display: inline-block;
+		vertical-align: middle;
 	}
 }
 
