@@ -1,0 +1,50 @@
+/*
+Theme Name: wp_backbone
+Author: Valentin Berthomé
+Author URI: http://www.valentin-berthome.fr/
+Description: Basic WordPress Theme
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: wp_backbone
+*/
+
+@import "reset";
+@import "function";
+@import "variable";
+@import "mixin";
+@import "helpers";
+@import "layout";
+@import "default";
+@import "wordpress";
+
+/**
+ * GENERAL
+ */
+@import "partials/site";
+@import "vendors/font-awesome";
+
+/**
+ * CONTENU
+ */
+@import "partials/post";
+@import "partials/loop";
+@import "partials/comments";
+@import "partials/nav";
+@import "partials/widget";
+@import "partials/button";
+@import "partials/form";
+@import "partials/image";
+@import "partials/video";
+
+/**
+ * ENTETE
+ */
+@import "partials/header";
+@import "partials/menu";
+@import "partials/branding";
+@import "partials/intro";
+
+/**
+ * SHORTCODE
+ */

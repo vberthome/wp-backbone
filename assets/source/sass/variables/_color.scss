@@ -1,0 +1,30 @@
+/**
+ * COULEURS
+ */
+// Couleur du thème
+$color-primary: #167C80;
+$color-secondary: #F0CF61;
+
+$color-success: mix(#2ECC40, $color-primary, 90%);
+$color-info:    mix(#0074D9, $color-primary, 90%);
+$color-warning: mix(#FFDC00, $color-primary, 90%);
+$color-error:   mix(#FF4136, $color-primary, 90%);
+
+// Couleur primaire
+$color-light: mix($color-primary, #fff, 5%);
+$color-dark: mix($color-primary, #111, 10%);
+
+$color-light-alt: mix($color-light, $color-dark, 95%);
+$color-dark-alt:  mix($color-light, $color-dark, 5%);
+
+$color-gray: #ccc;
+$color-gray-dark: darken($color-gray, 10%);
+$color-gray-light: lighten($color-gray, 10%);
+
+// Couleur des text
+$color-primary-text:   contrast-color($color-primary,   $color-dark, $color-light);
+$color-secondary-text: contrast-color($color-secondary, $color-dark, $color-light);
+$color-success-text:   contrast-color($color-success,   $color-dark, $color-light);
+$color-info-text:      contrast-color($color-info,      $color-dark, $color-light);
+$color-warning-text:   contrast-color($color-warning,   $color-dark, $color-light);
+$color-error-text:     contrast-color($color-error,     $color-dark, $color-light);

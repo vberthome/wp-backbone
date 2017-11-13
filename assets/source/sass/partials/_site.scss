@@ -1,0 +1,46 @@
+.site {
+
+}
+
+.site__content {
+}
+
+.site__content--sidebar {
+	@include clearfix();
+
+	max-width: $grid-container;
+	padding: $grid-gutter;
+	margin-left: auto;
+	margin-right: auto;
+
+	.site__main {
+		@include breakpoint(tablet) {
+			float: left;
+			width: 75%;
+			padding-right: $grid-gutter / 2;
+		}
+	}
+}
+
+.site__intro {
+	background-color: #f0f0f0;
+}
+
+.site__main,
+.site__sidebar {
+	@include clearfix();
+}
+
+.site__sidebar {
+	@include breakpoint(tablet) {
+		float: left;
+		width: 25%;
+		padding-left: $grid-gutter / 2;
+	}
+}
+
+.site__footer {
+	background-color: $color-primary;
+	color: $font-color-alt;
+	overflow: hidden;
+}

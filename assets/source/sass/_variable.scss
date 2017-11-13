@@ -1,0 +1,17 @@
+@import "variables/color";
+@import "variables/typography";
+
+/**
+ * TAILLES DES ECRANS
+ */
+$breakpoint-phone:   30em;
+$breakpoint-tablet:  48em;
+$breakpoint-menu:    60em;
+$breakpoint-desktop: 64em;
+
+/**
+ * MISE EN PAGE
+ */
+$grid-padding:   3rem;
+$grid-gutter:    2rem;
+$grid-container: 70rem;

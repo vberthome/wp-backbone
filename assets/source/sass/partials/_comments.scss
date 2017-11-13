@@ -1,0 +1,84 @@
+.comments {
+	margin: 2 * $line-height 0;
+}
+
+.comments__list {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+
+	.children {
+		list-style: none;
+		border-left: 2px solid $color-gray-light;
+		margin: $line-height 0;
+
+		.comment {
+			box-shadow: none;
+			padding: 0;
+		}
+	}
+
+	.avatar {
+		float: left;
+		border-radius: 50%;
+		margin-right: $line-height;
+	}
+
+	.comment,
+	.pingback {
+		background-color: #fff;
+		box-shadow: 0 0 2em rgba(0,0,0,0.1);
+		padding: 1em 2em;
+		margin-bottom: $line-height;
+	}
+
+	.comment-author {
+		line-height: 1;
+		font-weight: bold;
+
+		a {
+			line-height: 1;
+		}
+
+		.fn {
+			display: inline-block;
+			margin: 0.5em 0;
+			font-size: $font-size-h4;
+		}
+
+		.says {
+			display: none;
+		}
+	}
+
+	.comment-body {
+		position: relative;
+		@include clearfix();
+	}
+
+	.comment-meta {
+		@include clearfix();
+	}
+
+	.edit-link {
+		position: absolute;
+		top: 0;
+		right: 0;
+	}
+
+	.comment-edit-link,
+	.comment-reply-link {
+		@extend .button;
+	}
+
+	.comment-edit-link {
+		font-size: $font-size-h6;
+	}
+
+	.comment-metadata {
+	}
+
+	.comment-content {
+		margin: $line-height 0;
+	}
+}

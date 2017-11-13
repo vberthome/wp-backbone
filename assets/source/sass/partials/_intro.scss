@@ -1,0 +1,24 @@
+.intro {
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+.intro__wrapper {
+	max-width: $grid-container;
+	padding: $grid-gutter;
+	margin: auto;
+
+	@include breakpoint(tablet) {
+		display: flex;
+		align-items: flex-end;
+	}
+}
+
+.intro__header {
+
+}
+
+.intro__breadcrumbs {
+	margin-left: auto;
+}

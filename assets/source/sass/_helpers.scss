@@ -1,0 +1,95 @@
+.h-clearfix {
+	@include clearfix();
+}
+
+.h-sr-only {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	padding: 0;
+	overflow: hidden;
+	clip: rect(0,0,0,0);
+	border: 0;
+
+	&.h-sr-only--focusable {
+		&:active,
+		&:focus {
+			position: static;
+			width: auto;
+			height: auto;
+			margin: 0;
+			overflow: visible;
+			clip: auto;
+		}
+	}
+}
+
+.h-center-block {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.h-pull-right {
+	float: right !important;
+}
+
+.h-pull-left {
+	float: left !important;
+}
+
+.h-hide {
+	display: none !important;
+}
+
+.h-show {
+	display: block !important;
+}
+
+.h-invisible {
+	visibility: hidden;
+}
+
+.h-text-hide {
+	font: 0/0 a;
+	color: transparent;
+	text-shadow: none;
+	background-color: transparent;
+	border: 0;
+}
+
+.h-hidden {
+	display: none !important;
+	visibility: hidden !important;
+}
+
+.h-bg-primary {
+	background-color: $color-primary;
+	color: $color-primary-text;
+}
+
+.h-bg-secondary {
+	background-color: $color-secondary;
+	color: $color-secondary-text;
+}
+
+.h-bg-light {
+	background-color: $color-light;
+	color: $color-dark;
+}
+
+.h-bg-light-alt {
+	background-color: $color-light-alt;
+	color: $color-dark;
+}
+
+.h-bg-dark {
+	background-color: $color-dark;
+	color: $color-light;
+}
+
+.h-bg-dark-alt {
+	background-color: $color-dark-alt;
+	color: $color-light;
+}

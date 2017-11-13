@@ -1,0 +1,232 @@
+/**
+ * GENERAL
+ */
+body {
+	font-family: $font-family;
+	line-height: 1.5;
+	color: $font-color;
+	background-color: #fff;
+}
+
+/**
+ * LIENS
+ */
+a {
+	display: inline-block;
+	color: inherit;
+	text-decoration: none;
+
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+/**
+ * TITRE
+ */
+h1, h2, h3 {
+	font-weight: 700;
+	font-family: $font-family-alt;
+}
+
+h1 {
+	font-size: $font-size-h1;
+}
+
+h2 {
+	font-size: $font-size-h2;
+}
+
+h3 {
+	font-size: $font-size-h3;
+}
+
+h4 {
+	font-size: $font-size-h4;
+}
+
+h5 {
+	font-size: $font-size-h5;
+}
+
+h6 {
+	font-size: $font-size-h6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	a {
+		text-decoration: none;
+		transition: color 0.2s;
+
+		&:hover {
+			color: $color-primary;
+		}
+	}
+}
+
+/**
+ * CONTENU
+ */
+p, ul, ol, blockquote, pre, dl, table, figure, address {
+	margin-bottom: $line-height;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+ul {
+	list-style: disc;
+	padding-left: 2em;
+}
+
+ol {
+	list-style: decimal;
+	padding-left: 2em;
+}
+
+code,
+pre,
+tt,
+var {
+	background-color: $color-gray-light;
+	border: 1px solid $color-gray;
+	border-radius: 2px;
+	font-size: 90%;
+	padding: 0 0.3em;
+}
+
+code,
+tt,
+var {
+	display: inline-block;
+}
+
+pre {
+	padding: 0.5em 0.8em;
+	white-space: pre;
+	overflow-y: scroll;
+}
+
+kbd {
+	font-family: monospace;
+	font-size: 100%;
+}
+
+em {
+	font-style: italic;
+}
+
+strong {
+	font-weight: 700;
+}
+
+sub, sup {
+	font-size: 75%;
+}
+
+sub {
+	vertical-align: bottom;
+}
+
+sup {
+	vertical-align: top;
+}
+
+dt {
+	font-weight: bold;
+}
+
+dd {
+	padding-left: 2em;
+	margin-bottom: 0.5em;
+}
+
+table {
+	max-width: 100%;
+}
+
+thead {
+	border-bottom: 1px solid $color-gray-dark;
+	border-color: $color-gray-dark;
+}
+
+tbody {
+	border-color: $color-gray-light;
+}
+
+tr {
+	border-style: solid;
+	border-bottom-width: 1px;
+	border-color: inherit;
+
+	&:last-child {
+		border-bottom: 0;
+	}
+}
+
+th {
+	font-weight: bold;
+}
+
+td, th {
+	padding: 0.5em 1em;
+	border-style: solid;
+	border-right-width: 1px;
+	border-color: inherit;
+
+	&:last-child {
+		border-right: 0;
+	}
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+blockquote,
+q {
+	font-style: italic;
+	padding-left: 2rem;
+	position: relative;
+
+	&:before {
+		content: "\201C";
+		color: $color-gray-dark;
+	}
+}
+
+blockquote {
+	padding: 1rem 0 1rem 2rem;
+	position: relative;
+
+	&:before {
+		position: absolute;
+		font-size: 400%;
+		top: 0;
+		left: 0;
+		line-height: 1;
+	}
+
+	cite {
+		font-style: normal;
+	}
+}
+
+q {
+	&:before {
+		display: inline-block;
+		margin-right: 0.2em;
+	}
+}
+
+cite {
+	display: inline-block;
+	border-bottom: 1px solid $color-gray;
+	opacity: 0.5;
+}
+
+big {
+	font-size: 150%;
+}

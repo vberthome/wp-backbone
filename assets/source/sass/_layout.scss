@@ -1,0 +1,171 @@
+/**
+ * SECTION
+ */
+.l-section {
+}
+
+/**
+ * CONTENEUR
+ */
+.l-container {
+	max-width: $grid-container;
+	padding: 0 $grid-padding / 2;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.l-container--fullwidth {
+	max-width: initial;
+}
+
+/**
+ * GRILLE ET COLONNES
+ */
+.l-row {
+	margin-left: -$grid-gutter / 2;
+	margin-right: -$grid-gutter / 2;
+	display: flex;
+	flex-wrap: wrap;
+
+	@include clearfix();
+}
+
+.l-column {
+	width: 100%;
+	padding-left: $grid-gutter / 2;
+	padding-right: $grid-gutter / 2;
+}
+
+.l-item {
+	margin-top: $grid-gutter / 2;
+	margin-bottom: $grid-gutter / 2;
+}
+
+.l-row:first-child > .l-column:first-child > .l-item:first-child {
+	margin-top: 0;
+}
+
+.l-row:last-child > .l-column:last-child > .l-item:last-child {
+	margin-bottom: 0;
+}
+
+.l-column--1-1 {
+	width: 100%;
+}
+
+.l-column--1-2 {
+	@include breakpoint(desktop) {
+		width: 50%;
+	}
+}
+
+.l-column--1-3 {
+	@include breakpoint(desktop) {
+		width: 33.33%;
+	}
+}
+
+.l-column--1-4 {
+	@include breakpoint(desktop) {
+		width: 25%;
+	}
+}
+
+.l-column--2-3 {
+	@include breakpoint(desktop) {
+		width: 66.66%;
+	}
+}
+
+.l-column--3-4 {
+	@include breakpoint(desktop) {
+		width: 75%;
+	}
+}
+
+@each $point in phone, tablet, desktop {
+	.l-column--#{$point}-1-2,
+	.l-column--#{$point}-2-4 {
+		@include breakpoint($point) {
+			width: 50%;
+		}
+	}
+
+	.l-column--#{$point}-1-3 {
+		@include breakpoint($point) {
+			width: 33.33%;
+		}
+	}
+
+	.l-column--#{$point}-2-3 {
+		@include breakpoint($point) {
+			width: 66.66%;
+		}
+	}
+
+	.l-column--#{$point}-1-4 {
+		@include breakpoint($point) {
+			width: 25%;
+		}
+	}
+
+	.l-column--#{$point}-3-4 {
+		@include breakpoint($point) {
+			width: 75%;
+		}
+	}
+}
+
+/**
+ * ESPACE
+ */
+.l-outer-space {
+	margin-top: $grid-gutter;
+	margin-bottom: $grid-gutter;
+}
+
+.l-outer-space--sm {
+	margin-top: $grid-gutter / 2;
+	margin-bottom: $grid-gutter / 2;
+}
+
+.l-outer-space--xs {
+	margin-top: $grid-gutter / 4;
+	margin-bottom: $grid-gutter / 4;
+}
+
+.l-outer-space--lg {
+	margin-top: $grid-gutter * 2;
+	margin-bottom: $grid-gutter * 2;
+}
+
+.l-outer-space--xl {
+	margin-top: $grid-gutter * 4;
+	margin-bottom: $grid-gutter * 4;
+}
+
+.l-inner-space {
+	padding-top: $grid-gutter;
+	padding-bottom: $grid-gutter;
+}
+
+.l-inner-space--sm {
+	padding-top: $grid-gutter / 2;
+	padding-bottom: $grid-gutter / 2;
+}
+
+.l-inner-space--xs {
+	padding-top: $grid-gutter / 4;
+	padding-bottom: $grid-gutter / 4;
+}
+
+.l-inner-space--lg {
+	padding-top: $grid-gutter * 2;
+	padding-bottom: $grid-gutter * 2;
+}
+
+.l-inner-space--xl {
+	padding-top: $grid-gutter * 3;
+	padding-bottom: $grid-gutter * 3;
+}
+

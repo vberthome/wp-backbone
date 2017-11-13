@@ -1,0 +1,22 @@
+.branding {
+	font-family: $font-family-alt;
+}
+
+.branding__title {
+	font-size: $font-size-h2;
+	font-weight: bold;
+	text-transform: uppercase;
+	margin-bottom: 0;
+	white-space: nowrap;
+	line-height: 1;
+
+	a {
+		border-bottom: 0;
+		line-height: inherit;
+	}
+}
+
+.branding__description {
+	font-weight: 300;
+	font-size: 0.9rem;
+}

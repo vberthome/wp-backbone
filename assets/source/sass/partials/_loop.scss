@@ -1,0 +1,50 @@
+.loop {
+	padding-bottom: 3rem;
+	margin-bottom: 3rem;
+	border-bottom: 1px solid $color-gray;
+}
+
+.loop__thumbnail {
+	img {
+		vertical-align: middle;
+		display: block;
+		width: 100%;
+		height: auto;
+	}
+}
+
+.loop__title {
+	font-size: $font-size-h1;
+
+	a {
+		border-bottom: 0;
+
+		&:hover {
+			color: $color-primary;
+		}
+	}
+}
+
+
+
+.loop__content {
+	margin-bottom: $line-height;
+
+	@include clearfix();
+}
+
+.loop__meta {
+	color: $color-gray;
+	font-size: $font-size-h6;
+	text-transform: uppercase;
+}
+
+.loop__footer {
+	color: $color-gray-dark;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.loop__comments-number {
+}

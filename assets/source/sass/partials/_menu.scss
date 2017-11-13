@@ -1,0 +1,132 @@
+.menu {
+	list-style: none;
+	padding: 0;
+	font-family: $font-family-alt;
+
+	@include breakpoint(menu) {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		text-align: center;
+	}
+
+	.menu-item {
+ 		display: block;
+		text-transform: uppercase;
+		font-weight: bold;
+		position: relative;
+		border-bottom: 1px solid $color-gray-light;
+
+		&:last-child {
+			border-bottom: 0;
+		}
+
+		@include breakpoint(menu) {
+			border-bottom: 0;
+		}
+
+		&:hover {
+			cursor: pointer;
+
+			@include breakpoint(menu) {
+				> .sub-menu {
+					display: block;
+				}
+			}
+
+			> a {
+				border-color: $color-primary;
+			}
+		}
+
+		a {
+			display: block;
+			padding: 1rem;
+
+			@include breakpoint(menu) {
+				padding: 0.5rem 1rem;
+				border-bottom: 2px solid transparent;
+			}
+		}
+	}
+
+	.current_page_item {
+		> a {
+			color: $color-gray-dark;
+		}
+	}
+
+	.sub-menu {
+		display: none;
+		list-style: none;
+		margin: 0;
+		padding-left: 1rem;
+		text-align: left;
+		min-width: 10rem;
+		border-top: 1px solid $color-gray-light;
+
+		@include breakpoint(menu) {
+			background-color: #fff;
+			position: absolute;
+			top: 100%;
+			box-shadow: 0 4px 4px rgba(0,0,0,0.1);
+			padding: 0.5em 0;
+			border-top: 0;
+		}
+
+		.menu-item {
+			a {
+				border-bottom: 0;
+			}
+
+			&:hover > a {
+				color: $color-primary;
+			}
+		}
+
+		.sub-menu {
+			@include breakpoint(menu) {
+				left: 100%;
+				top: 0;
+				border-left: 2px solid $color-primary;
+			}
+
+			a {
+				white-space: nowrap;
+			}
+		}
+	}
+
+	.menu-item-has-children {
+		position: relative;
+		> a {
+			padding-right: 3rem;
+
+			@include breakpoint(menu) {
+				padding-right: 1rem;
+			}
+		}
+	}
+
+	.menu-display-sub-menu {
+		position: absolute;
+		right: 0;
+		top: 0;
+		padding: 1rem;
+		border-left: 1px solid $color-gray-light;
+
+		&:after {
+			content: $fa-var-plus;
+			@extend .icon;
+		}
+
+		@include breakpoint(menu) {
+			display: none;
+		}
+	}
+}
+
+.menu--primary {
+	max-width: $grid-container;
+	margin: auto;
+}

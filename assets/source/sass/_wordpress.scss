@@ -1,0 +1,140 @@
+/* =WordPress Core
+-------------------------------------------------------------- */
+.alignnone {
+    clear: both;
+    margin: 0 0 $line-height 0;
+}
+
+.aligncenter,
+div.aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.alignright {
+    float: right;
+    margin: 0 0 $line-height $line-height;
+}
+
+.alignleft {
+    float: left;
+    margin: 0 $line-height $line-height 0;
+}
+
+.wp-caption {
+    background: #fff;
+    padding: 0;
+    text-align: center;
+    box-shadow: 0 0 $line-height rgba(0,0,0,0.1);
+    max-width: 100%;
+
+	img {
+	    border: 0 none;
+	    height: auto;
+	    width: 100%;
+	    vertical-align: middle;
+	}
+}
+
+.wp-caption-text {
+    padding: $line-height 1.5 * $line-height;
+    text-align: center;
+    font-style: italic;
+}
+
+/* Text meant only for screen readers. */
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+}
+
+.screen-reader-text:focus {
+	background-color: #f1f1f1;
+	border-radius: 3px;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	color: #21759b;
+	display: block;
+	font-size: 14px;
+	font-size: 0.875rem;
+	font-weight: bold;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000; /* Above WP toolbar. */
+}
+
+
+/**
+ * GALLERIE
+ */
+.gallery {
+	display: flex;
+	flex-wrap: wrap;
+	margin-bottom: $line-height;
+}
+
+.gallery-item {
+	margin: 0;
+	position: relative;
+	z-index: 0;
+
+	&:hover {
+		z-index: 10;
+	}
+}
+
+.gallery-icon {
+	text-align: center;
+	a {
+		border-bottom: 0;
+	}
+	img {
+		vertical-align: middle;
+	}
+}
+
+.gallery-caption {
+	background-color: #fff;
+}
+
+@for $column-width from 1 to 10 {
+	.gallery-columns-#{$column-width} {
+		.gallery-item {
+			width: ((100% / $column-width));
+		}
+	}
+}
+
+/**
+ * Pagination
+ */
+.page-links {
+	text-align: center;
+
+	a {
+		transition: color 0.2s;
+
+		&:hover {
+			color: $color-primary;
+		}
+	}
+
+	span {
+		display: inline-block;
+		padding: 0 0.5em;
+		margin: 0.5em;
+	}
+
+	> span {
+		color: $color-gray;
+	}
+}

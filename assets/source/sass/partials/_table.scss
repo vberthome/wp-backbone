@@ -1,0 +1,15 @@
+.table {
+	> table {
+		width: 100%;
+	}
+
+	thead {
+		border-bottom: 0;
+		border-color: #fff;
+	}
+}
+
+.table__headings {
+	background-color: $color-primary;
+	color: $font-color-alt;
+}

@@ -1,0 +1,64 @@
+.button {
+	display: inline-block;
+	padding: calc(0.75em - 1px) 1.5em;
+	border: 1px solid $color-gray-light;
+	color: $color-primary;
+	text-transform: uppercase;
+	font-family: $font-family-alt;
+	font-weight: bold;
+	line-height: 1;
+	text-align: center;
+
+	transition-property: color, border-color, background-color;
+	transition-duration: 0.2s;
+
+	&:hover {
+		border-color: $color-primary;
+	}
+
+	&:active {
+		color: $color-gray-light;
+		border-color: $color-gray-light;
+	}
+}
+
+.button--primary {
+	background-color: $color-primary;
+	border-color: $color-primary;
+	color: #fff;
+
+	&:hover {
+		background-color: #fff;
+		color: $color-primary;
+		border-color: $color-primary;
+	}
+}
+
+.button--dark {
+	background-color: $font-color;
+	color: #fff;
+	border-color: $font-color;
+
+	&:hover {
+		background-color: $color-primary;
+		border-color: $color-primary;
+		color: #fff;
+	}
+}
+
+.button--light {
+	background-color: #fff;
+	color: $font-color;
+	border-color: initial;
+
+	&:hover {
+		background-color: $color-primary;
+		border-color: $color-primary;
+		color: #fff;
+	}
+}
+
+.button--fullwidth {
+	display: block;
+	width: 100%;
+}
